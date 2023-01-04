@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/9604cbcf03.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1><span>A</span>mar.</h1>
+            </div>
+            <div class="links">
+                <ul id="sidemenu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </div>
+        </nav>
+        <div class="main-container">
+            <div class="header-text">
+                <div class="head-text">
+                    <h1>Hi, I'm <span>Amar</span> Mulwani</h1>
+                </div>
+                <div class="para-text">
+                    <p>A <span>Beginner Level</span> Developer</p>
+                </div>
+            </div>
+
+            <div class="header-image">
+                <img src="img/headimg.jpeg" alt="">
+            </div>
+        </div>
+        <!-- =============  about ============ -->
+        <div id="about">
+            <div class="about-container">
+                <h1 class="subtitle">About Me</h1>
+                <div class="about-titles">
+                    <p class="titles active-link" id="languages">Languages I Know</p>
+                    <p class="titles" id="courses">Courses and Certifications</p>
+                    <p class="titles" id="education">Education</p>
+                </div>
+
+                <div class="skill-container about-contents active-tab" id="languages-contents">
+                    <div class="skill">
+                        <div class="skill-name">HTML</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90%" style="max-width:90%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-name">BootStrap</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="80%" style="max-width:80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">CSS</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="50%" style="max-width:50%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">JavaScipt</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="40%" style="max-width:40%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="40%" style="max-width:40%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses about-contents" id="courses-contents">
+                    <h3>The Complete Web Development Bootcamp <br>By Angela Yu</h3>
+                    <p>2022-present</p>
+                    <p><span>Platform: </span>Udemy</p>
+                </div>
+                <div class="education about-contents" id="education-contents">
+                    <ul>
+                        <li><span>2020</span><br>
+                            SSC from The Bright School
+                        </li>
+                        <li><span>2022</span><br>
+                            HSC from The Bright School
+                        </li>
+                        <li><span>2022-2025</span><br>
+                            BCA from MSU Baroda
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ====== Projects ===== -->
+        <div id="Projects">
+            <h1 class="subtitle">Projects</h1>
+            <div class="project-container">
+                <div class="card">
+                    <img src="Img/project1.png" alt="Image 1">
+                    <h3>TinDog</h3>
+                    <p>A website designed using Bootstrap</p>
+                    <a href="https://amar-04.github.io/TinDog/"><i class="fa-solid fa-square-up-right"></i></a>
+                </div>
+                <div class="card">
+                    <img src="Img/project2.png" alt="Image 2">
+                    <h3>Drum Kit</h3>
+                    <p>A basic drum kit made using JavaScript</p>
+                    <a href="https://amar-04.github.io/Drum-Kit/"><i class="fa-solid fa-square-up-right"></i></a>
+                </div>
+                <div class="card">
+                    <img src="Img/project3.png" alt="Image 3">
+                    <h3>Dice Game</h3>
+                    <p>A simple dice game made using JavaScript</p>
+                    <a href="https://amar-04.github.io/DiceGame/"><i class="fa-solid fa-square-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- =======Contact======= -->
+
+        <div id="contact">
+            <h1 class="subtitle">Contact Me</h1>
+            <p><i class="fa-solid fa-phone"></i> 9499634352</p>
+            <p><i class="fa-solid fa-envelope"></i> mulwaniamar@gmail.com</p>
+            <a href="https://www.instagram.com/theeternalmulwani_/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/amar-mulwani-63354824a/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+        <script>
+
+            var titles = document.getElementsByClassName("titles");
+
+
+            for (var i = 0; i < titles.length; i++) {
+                titles[i].addEventListener("click", function (event) {
+
+                    for (var i = 0; i < titles.length; i++) {
+                        titles[i].classList.remove("active-link");
+                    }
+
+
+                    event.target.classList.add("active-link");
+
+
+                    var aboutContents = document.getElementsByClassName("about-contents");
+                    for (var i = 0; i < aboutContents.length; i++) {
+                        aboutContents[i].classList.remove("active-tab");
+                    }
+
+
+                    var tabId = event.target.id;
+                    var activeTab = document.getElementById(tabId + "-contents");
+                    activeTab.classList.add("active-tab");
+                });
+            }
+
+            window.addEventListener('scroll', function () {
+                const aboutMeSection = document.querySelector('#about');
+                const aboutMePosition = aboutMeSection.offsetTop;
+                if (window.scrollY > aboutMePosition) {
+                    document.querySelectorAll('.skill-per').forEach(function (bar) {
+                        if (!bar.classList.contains('animated')) {
+                            bar.classList.add('animated');
+                        }
+                    });
+                }
+            });
+            window.addEventListener('scroll', function () {
+                const aboutMeSection = document.querySelector('#about');
+                const aboutMePosition = aboutMeSection.offsetTop;
+                if (window.scrollY > aboutMePosition) {
+                    document.querySelectorAll('.skill-per').forEach(function (bar) {
+                        if (!bar.classList.contains('animated')) {
+                            bar.classList.add('animated');
+                            bar.addEventListener('animationend', function () {
+                                bar.classList.remove('animated');
+                            });
+                        }
+                    });
+                }
+            });
+
+
+        </script>
+
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu() {
+                sidemenu.style.right = "0"
+            }
+            function closemenu() {
+                sidemenu.style.right = "-200px"
+            }
+        </script>
+
+</body>
+
+
+</html>
