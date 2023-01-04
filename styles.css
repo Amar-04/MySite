@@ -414,8 +414,8 @@ nav .fa-solid {
         flex-direction: column;
     }
     .card {
-        margin: 15px;
+        margin: 15px 0;
         width: 365px;
     }
-    /* 467*266 */
+    
 }
